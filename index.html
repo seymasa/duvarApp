@@ -14,8 +14,12 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/angular.min.js"></script>
+
+    <script>
+        var app = angular.module("duvarApp", []);
+    </script>
 </head>
-<body>
+<body ng-app="duvarApp">
 <header>
     <div class="header">
         <div class="logo">
@@ -26,10 +30,10 @@
         </div>
     </div>
 </header>
-<main>
+<main ng-controller="duvarController">
     <div class="container">
         <div class="new-message">
-            <label for="new-message-input">Merhaba <span id="new-message-author">Yeni Kullanıcı</span></label>
+            <label for="new-message-input">Merhaba <span id="new-message-author">{{ author }}</span></label>
             <div class="input-group">
                 <textarea id="new-message-input" rows="2" class="form-control" placeholder="DUVAR'a yaz"></textarea>
                 <div class="input-group-append">
@@ -40,17 +44,17 @@
             </div>
         </div>
         <div class="all-messages">
-            <div class="single-message">
+            <div class="single-message" ng-repeat="msg in sampleMessages">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="message-box">
-                            <h4 class="message-author"><i class="fas fa-feather-alt"></i> Yeni Kullanıcı</h4>
-                            <p class="message-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid aut dolorem esse exercitationem facilis hic labore laboriosam maxime modi non porro quam quas quibusdam repudiandae, tempora ullam vitae. Numquam, similique, tenetur!</p>
+                            <h4 class="message-author"><i class="fas fa-feather-alt"></i> {{ msg.author }}</h4>
+                            <p class="message-content">{{ msg.message }}</p>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="message-buttons">
-                            <button class="btn btn-warning btn-sm" data-toggle="collapse" data-target="#collapseExample">
+                            <button class="btn btn-warning btn-sm" data-toggle="collapse" data-target="#collapse_{{ msg.id }}">
                                 <i class="fas fa-angle-down" style="margin-right: 5px;"></i> Etiketler
                             </button>
                             <button class="btn btn-danger btn-sm">
@@ -59,27 +63,21 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="message-tags collapse" id="collapseExample">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="tag">
-                                        <span class="tag-label">Irkçılık</span>
-                                        <span class="tag-level">80.22 %</span>
-                                    </div>
-                                    <div class="progressbar">
-                                        <div class="progress-level" style="width: 80.22%"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="tag">
-                                        <span class="tag-label">Cinsiyetçilik</span>
-                                        <span class="tag-level">92.54 %</span>
-                                    </div>
-                                    <div class="progressbar">
-                                        <div class="progress-level" style="width: 92.54%;"></div>
+                        <div class="collapse" id="collapse_{{ msg.id }}">
+                            <div class="message-tags">
+                                <div class="row">
+                                    <div class="col-md-3 tags" ng-repeat="tag in msg.tags">
+                                        <div class="tag">
+                                            <span class="tag-label">{{ tag.label }}</span>
+                                            <span class="tag-level">{{ tag.value }} %</span>
+                                        </div>
+                                        <div class="progressbar">
+                                            <div class="progress-level" style="width: {{ tag.value }}%"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

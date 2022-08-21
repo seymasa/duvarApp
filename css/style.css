@@ -9,21 +9,27 @@
     --light-brown: #4B371C;
     --default-brown: #231709;
     --dark-brown: #231604;
+    --shadow: 0 5px 7px 0 rgba(0,0,0,0.5);
 }
-
-html, body, main {
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
     width: 100%;
     height: 100%;
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: 14px;
     color: #fff;
 }
-body {
+main {
+    min-height: 100%;
     background: rgb(75,55,28);
     background: linear-gradient(135deg, var(--light-brown) 0%, var(--default-brown) 100%);
 }
 .header{
     position: fixed;
+    z-index: 2000;
     top: 0;
     width: 100%;
     height: var(--header-height);
@@ -31,11 +37,13 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 5px 15px;
+    box-shadow: var(--shadow);
 }
 .container {
     padding-top: calc(var(--header-height) + 10px);
     background: rgba(0,0,0,0.15);
     height: 100%;
+    padding-bottom: 5px;
 }
 .container .new-message {
     margin-top: 15px;
@@ -48,11 +56,16 @@ body {
 }
 
 .container .all-messages .single-message {
-    background: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.1);
     border: 1px solid var(--lighter-brown);
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 15px;
+    transition: background-color linear .3s;
+    box-shadow: var(--shadow);
+}
+.container .all-messages .single-message:hover {
+    background-color: rgba(255,255,255,0.05);
 }
 .container .all-messages .single-message .message-author {
     font-size: 16px;
@@ -79,7 +92,13 @@ body {
     margin-right: 5px;
 }
 .container .all-messages .single-message .message-tags {
-    padding: 10px 0;
+    padding: 10px 0 0 0;
+}
+.container .all-messages .single-message .message-tags .tags {
+    margin-bottom: 10px;
+}
+.container .all-messages .single-message .message-tags .tags:last-child {
+    margin-bottom: 0;
 }
 .container .all-messages .single-message .message-tags .tag{
     display: flex;
