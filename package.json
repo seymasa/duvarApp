@@ -1,0 +1,19 @@
+{
+  "name": "duvarapp",
+  "version": "1.0.0",
+  "description": "Teknofest ve Acikhack'in düzenlemiş olduğu Türkçe Doğal Dil İşleme yarışması için ekipçe geliştirdiğimiz bert tabanlı zorbalık modelinin kullanımına ilişkin örnek teşkil etmesi için geliştirilen bir application dır.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seymasa/duvarApp.git"
+  },
+  "author": "Seymasa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seymasa/duvarApp/issues"
+  },
+  "homepage": "https://github.com/seymasa/duvarApp#readme"
+}
