@@ -5,7 +5,7 @@ app.controller("duvarController", function($scope, $http) {
     $scope.tags = ["Irkçılık", "Cinsiyetçilik", "Kızdırma", "Nötr"];
 
     $scope.sampleMessages = [
-        {
+        /*{
             id: "i4xkTa7ZscEp",
             author:"Test Kullanıcı 2",
             message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum massa nisl. Aliquam a lacinia elit. Morbi sed bibendum nisi. Donec consectetur iaculis elementum. Proin sollicitudin lacinia feugiat. Nullam tincidunt viverra ex vitae.",
@@ -19,7 +19,7 @@ app.controller("duvarController", function($scope, $http) {
                     score:92.44
                 }
             ]
-        },
+        },*/
     ];
 
     $scope.deleteMessage = function (id) {
