@@ -1,6 +1,8 @@
 {
-  "name": "duvarApp",
-  "version": "0.0.0",
+  "name": "duvarapp",
+  "version": "1.0.0",
+  "description": "Teknofest ve Acikhack'in düzenlemiş olduğu Türkçe Doğal Dil İşleme yarışması için ekipçe geliştirdiğimiz bert tabanlı zorbalık modelinin kullanımına ilişkin örnek teşkil etmesi için geliştirilen bir application dır.",
+  "main": "index.html",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
