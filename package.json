@@ -81,7 +81,6 @@
     "fs-minipass": "^2.1.0",
     "function-bind": "^1.1.1",
     "gauge": "^4.0.4",
-    "fsevents": "^2.3.2",
     "gensync": "^1.0.0-beta.2",
     "glob": "^8.0.3",
     "get-caller-file": "^2.0.5",
