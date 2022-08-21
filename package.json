@@ -8,12 +8,10 @@
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --prod"
   },
   "engines": {
-    "node": "16.8.0",
+    "node": "16.10.0",
     "npm": "8.15.0"
   },
   "repository": {
