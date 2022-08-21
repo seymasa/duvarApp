@@ -18,7 +18,7 @@
     "url": "git+https://github.com/seymasa/duvarApp.git"
   },
   "author": "Seymasa",
-  "license": "ISC",
+  "license": "GPL-3",
   "bugs": {
     "url": "https://github.com/seymasa/duvarApp/issues"
   },
