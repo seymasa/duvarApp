@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --output-path duvarApp --aot --prod"
+    "postinstall": "ng build"
   },
   "engines": {
     "node": "18.7.0",
