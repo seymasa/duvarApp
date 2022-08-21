@@ -13,7 +13,7 @@
     "postbuild": "ng build --prod"
   },
   "engines": {
-    "node": "18.7.0",
+    "node": "16.8.0",
     "npm": "8.15.0"
   },
   "repository": {
