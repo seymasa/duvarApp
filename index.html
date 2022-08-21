@@ -29,6 +29,7 @@
             <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#editUser">
                 <i class="fas fa-user-edit"></i> Kullanıcıyı Düzenle
             </button>
+
         </div>
     </div>
 </header>
@@ -71,10 +72,10 @@
                                     <div class="col-md-3 tags" ng-repeat="tag in msg.tags">
                                         <div class="tag">
                                             <span class="tag-label">{{ tag.label }}</span>
-                                            <span class="tag-level">{{ tag.value }} %</span>
+                                            <span class="tag-level">{{ tag.score }} %</span>
                                         </div>
                                         <div class="progressbar">
-                                            <div class="progress-level" style="width: {{ tag.value }}%"></div>
+                                            <div class="progress-level" style="width: {{ tag.score }}%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -83,6 +84,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

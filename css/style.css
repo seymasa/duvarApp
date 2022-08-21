@@ -5,11 +5,11 @@
 }
 :root {
     --header-height: 40px;
-    --lighter-brown: #bbe8fc;
-    --light-brown: #5fb4d9;
-    --default-brown: rgba(255, 255, 255, 0.19);
+    --lighter-brown: #9a7b4f;
+    --light-brown: #4B371C;
+    --default-brown: #231709;
     --dark-brown: #231604;
-    --shadow: 0 5px 7px 0 rgba(64, 145, 87, 0.58);
+    --shadow: 0 5px 7px 0 rgba(0,0,0,0.5);
 }
 html {
     width: 100%;
@@ -18,8 +18,8 @@ html {
 body {
     width: 100%;
     height: 100%;
-    font-family: "Comic Sans MS" ;
-    font-size: 20px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 14px;
     color: #fff;
 }
 main {
@@ -63,13 +63,14 @@ button:disabled {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 15px;
-    transition: background-color linear .6s;
+    transition: background-color linear .3s;
     box-shadow: var(--shadow);
     background:
             linear-gradient(
-                    rgba(64, 145, 87, 0.58),
+                    rgba(0, 0, 0, 0.5),
                     rgba(0, 0, 0, 0.0)
-            )
+            ),
+            url("../img/wall.jpg");
 }
 .container .all-messages .single-message:hover {
     background-color: rgba(255,255,255,0.05);
