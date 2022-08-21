@@ -26,7 +26,9 @@
             <h2 class="logo">DUVAR</h2>
         </div>
         <div class="user-action">
-
+            <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#editUser">
+                <i class="fas fa-user-edit"></i> Kullanıcıyı Düzenle
+            </button>
         </div>
     </div>
 </header>
@@ -35,9 +37,9 @@
         <div class="new-message">
             <label for="new-message-input">Merhaba <span id="new-message-author">{{ author }}</span></label>
             <div class="input-group">
-                <textarea id="new-message-input" rows="2" class="form-control" placeholder="DUVAR'a yaz"></textarea>
+                <textarea id="new-message-input" rows="2" class="form-control" placeholder="DUVAR'a yaz" ng-model="newMessage"></textarea>
                 <div class="input-group-append">
-                    <button class="btn btn-success" type="button">
+                    <button class="btn btn-success send-button" type="button" ng-click="insertNewMessage()" ng-disabled="newMessage === null || newMessage === ''">
                         <i class="fas fa-spray-can"></i>
                     </button>
                 </div>
@@ -57,7 +59,7 @@
                             <button class="btn btn-warning btn-sm" data-toggle="collapse" data-target="#collapse_{{ msg.id }}">
                                 <i class="fas fa-angle-down" style="margin-right: 5px;"></i> Etiketler
                             </button>
-                            <button class="btn btn-danger btn-sm">
+                            <button class="btn btn-danger btn-sm" ng-click="deleteMessage(msg.id)">
                                 <i class="fas fa-trash-alt" style="margin-right: 5px;"></i> Sil
                             </button>
                         </div>
@@ -81,7 +83,26 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="editUserLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editUserLabel">Kullanıcıyı Düzenle</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="newAuthorName">Yeni Kullanıcı Adı</label>
+                        <input type="text" class="form-control" id="newAuthorName" placeholder="Yeni Kullanıcı Adı" ng-model="newAuthorName">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-success btn-sm" ng-click="setNewAuthorName()" ng-disabled="newAuthorName === null || newAuthorName === ''">Kaydet</button>
+                </div>
             </div>
         </div>
     </div>
