@@ -1,2 +1,2 @@
 # duvarApp
-Teknofest ve Acikhack'in düzenlemiş olduğu Türkçe Doğal Dil İşleme yarışması için ekipçe geliştirdiğimiz bert tabanlı zorbalık modelinin kullanımına ilişkin örnek teşkil etmesi için geliştirilen bir application dır.
+It is an application developed for the Turkish Natural Language Processing competition organized by Teknofest and Acikhack to set an example for the use of the bert-based bullying model we developed as a team.
